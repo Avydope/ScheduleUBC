@@ -1,0 +1,19 @@
+{
+  "title": "invalid type",
+  "input": {
+    "WHERE": {
+      "GT": {
+        "rooms1_avg": 102
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms1_avg"
+      ],
+      "ORDER": "rooms1_avg"
+    }
+  },
+	"errorExpected": true,
+	"expected": "InsightError"
+}
+

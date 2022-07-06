@@ -1,0 +1,83 @@
+{
+	"title": "rooms MIN basic invalid query",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 98
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"countAvgs",
+				"maxAvg",
+				"courses_title"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title"
+			],
+			"APPLY": [
+				{
+					"countAvgs": {
+						"COUNT": "courses_avg"
+					}
+				},
+				{
+					"maxAvg": {
+						"COUNT": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"countAvgs": 1,
+			"maxAvg": 1,
+			"courses_title": "career planning"
+		},
+		{
+			"countAvgs": 1,
+			"maxAvg": 1,
+			"courses_title": "multimedia sys"
+		},
+		{
+			"countAvgs": 3,
+			"maxAvg": 3,
+			"courses_title": "assess lrn diffi"
+		},
+		{
+			"countAvgs": 3,
+			"maxAvg": 3,
+			"courses_title": "educ stds autism"
+		},
+		{
+			"countAvgs": 1,
+			"maxAvg": 1,
+			"courses_title": "dev el sk df&hrd"
+		},
+		{
+			"countAvgs": 1,
+			"maxAvg": 1,
+			"courses_title": "algb topology i"
+		},
+		{
+			"countAvgs": 2,
+			"maxAvg": 2,
+			"courses_title": "cl pro prim care"
+		},
+		{
+			"countAvgs": 2,
+			"maxAvg": 2,
+			"courses_title": "fam nrs pract"
+		},
+		{
+			"countAvgs": 1,
+			"maxAvg": 1,
+			"courses_title": "work int health"
+		}
+	]
+}
+

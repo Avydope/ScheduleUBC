@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>310 Frontend</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>CPSC 310 Project</h1>
+
+
+		<form name="add-form" class="form-inline" target="dummyframe">
+			<button id="add-button" class="button">Add Dataset</button>
+			&nbsp;&nbsp;
+
+			<label for="add_id">ID:</label>
+			<input type="text" id="add_id" placeholder="id" name="add_id">
+			<label for="add_type">Choose a type:</label>
+			<select id="add_type" name="add_type">
+				<option value="courses">courses</option>
+				<option value="rooms">rooms</option>
+			</select>
+			&nbsp;&nbsp;
+			<input type="file" id="courses_file">
+		</form>
+		<br>
+		<form name="remove-form" class="form-inline" target="dummyframe">
+			<button id="remove-button" class="button">Remove Dataset</button>
+			&nbsp;&nbsp;
+			<label for="remove_id">ID:</label>
+			<input type="text" id="remove_id" placeholder="id" name="remove_id">
+		</form>
+		<br>
+		<form name="list-form" class="form-inline" target="dummyframe">
+			<button id="list-button" class="button">List Dataset</button>
+		</form>
+
+		<form name="query-form" class="form-inline" target="dummyframe">
+			<button id="query-button" class="button">Send Query</button>
+			&nbsp;&nbsp;
+			<label>Query:</label>
+			<textarea id = "query-input" rows = "20" cols = "40" name = "description"
+					  placeholder="Enter query"></textarea>
+			&nbsp;&nbsp;
+			<label>Results:</label>
+			<textarea id="query-result" rows = "20" cols = "40" name = "description"></textarea>
+		</form>
+
+		<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+		<script type="text/javascript" src="/frontend.js"></script>
+	</body>
+</html>

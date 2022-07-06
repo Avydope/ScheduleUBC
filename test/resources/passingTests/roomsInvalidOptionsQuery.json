@@ -1,0 +1,19 @@
+{
+	"title": "invalid options rooms query",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_shortname": "BUCH"
+			}
+		},
+		"OPTIONS":{
+			"COLUMNS": [
+				"rooms_dept", "rooms_name", "rooms_type"
+			],
+			"ORDER": "rooms_name",
+			"FORM": "TABLE"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

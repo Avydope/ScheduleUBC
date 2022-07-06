@@ -1,0 +1,243 @@
+{
+	"title": "rooms COUNT basic query",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"countAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title"
+			],
+			"APPLY": [
+				{
+					"countAvg": {
+						"COUNT": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_title": "comptn, progrmng",
+			"countAvg": 55
+		},
+		{
+			"courses_title": "model comptn",
+			"countAvg": 53
+		},
+		{
+			"courses_title": "sftwr constructn",
+			"countAvg": 40
+		},
+		{
+			"courses_title": "intro comp sys",
+			"countAvg": 36
+		},
+		{
+			"courses_title": "basic alg&data",
+			"countAvg": 45
+		},
+		{
+			"courses_title": "dta&alg elec eng",
+			"countAvg": 5
+		},
+		{
+			"courses_title": "basics comp syst",
+			"countAvg": 4
+		},
+		{
+			"courses_title": "comptng life sci",
+			"countAvg": 7
+		},
+		{
+			"courses_title": "num comp alg prb",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "num approx/discr",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "intr rel databse",
+			"countAvg": 31
+		},
+		{
+			"courses_title": "intr sftwr eng",
+			"countAvg": 33
+		},
+		{
+			"courses_title": "programmng langs",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "func & logic prg",
+			"countAvg": 10
+		},
+		{
+			"courses_title": "comp hard&os",
+			"countAvg": 31
+		},
+		{
+			"courses_title": "comp graphics",
+			"countAvg": 27
+		},
+		{
+			"courses_title": "internet comp",
+			"countAvg": 27
+		},
+		{
+			"courses_title": "softwr eng proj",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "intr alg dsgn&an",
+			"countAvg": 31
+		},
+		{
+			"courses_title": "artificial intel",
+			"countAvg": 28
+		},
+		{
+			"courses_title": "machine lrn mine",
+			"countAvg": 10
+		},
+		{
+			"courses_title": "hum-com interact",
+			"countAvg": 11
+		},
+		{
+			"courses_title": "adv rel databse",
+			"countAvg": 27
+		},
+		{
+			"courses_title": "adv software eng",
+			"countAvg": 8
+		},
+		{
+			"courses_title": "compiler constrc",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "adv opertng sysm",
+			"countAvg": 10
+		},
+		{
+			"courses_title": "distrbt'd systms",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "parallel comput",
+			"countAvg": 3
+		},
+		{
+			"courses_title": "adv alg dsgn&anl",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "theory comptg",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "intel systems",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "computer vision",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "comptr & society",
+			"countAvg": 11
+		},
+		{
+			"courses_title": "hmn-cp interactn",
+			"countAvg": 5
+		},
+		{
+			"courses_title": "alg in bioin",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "honours thesis",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "student seminar",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "fund alg dsgn&an",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "thry of automata",
+			"countAvg": 6
+		},
+		{
+			"courses_title": "artif intell 1",
+			"countAvg": 7
+		},
+		{
+			"courses_title": "computl ling 1",
+			"countAvg": 6
+		},
+		{
+			"courses_title": "software eng",
+			"countAvg": 5
+		},
+		{
+			"courses_title": "prog lang princ",
+			"countAvg": 5
+		},
+		{
+			"courses_title": "intgrt sys desgn",
+			"countAvg": 8
+		},
+		{
+			"courses_title": "comput robotics",
+			"countAvg": 3
+		},
+		{
+			"courses_title": "para algs & arch",
+			"countAvg": 7
+		},
+		{
+			"courses_title": "artif intell 2",
+			"countAvg": 4
+		},
+		{
+			"courses_title": "comp comm protcl",
+			"countAvg": 4
+		},
+		{
+			"courses_title": "machine learn i",
+			"countAvg": 8
+		},
+		{
+			"courses_title": "phy user intfc",
+			"countAvg": 6
+		},
+		{
+			"courses_title": "hmn-cmpt intract",
+			"countAvg": 9
+		},
+		{
+			"courses_title": "info visualizatn",
+			"countAvg": 2
+		},
+		{
+			"courses_title": "m.sc major essay",
+			"countAvg": 12
+		}
+	]
+}

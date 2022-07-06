@@ -1,0 +1,36 @@
+{
+  "title": "roomsMATHMATXATHMATXColumns",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "IS": {
+            "roomsMATHMATX_furniture": "*Tables*"
+          }
+        },
+        {
+          "GT": {
+            "roomsMATHMATX_seats": 300
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "roomsMATHMATX_shortname",
+        "roomsMATHMATX_fullname",
+        "roomsMATHMATX_number",
+        "roomsMATHMATX_name",
+        "roomsMATHMATX_address",
+        "roomsMATHMATX_lat",
+        "roomsMATHMATX_lon",
+        "roomsMATHMATX_seats",
+        "roomsMATHMATX_type",
+        "roomsMATHMATX_furniture",
+        "roomsMATHMATX_href"
+      ]
+    }
+  },
+  "errorExpected": false,
+  "expected": []
+}

@@ -1,0 +1,71 @@
+{
+	"title": "a strictly years query",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"maxName",
+				"courses_year"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_year"
+			],
+			"APPLY": [
+				{
+					"maxName": {
+						"MAX": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"maxName": 99.78,
+			"courses_year": 1900
+		},
+		{
+			"maxName": 97.67,
+			"courses_year": 2007
+		},
+		{
+			"maxName": 96.94,
+			"courses_year": 2008
+		},
+		{
+			"maxName": 99.78,
+			"courses_year": 2009
+		},
+		{
+			"maxName": 98.58,
+			"courses_year": 2010
+		},
+		{
+			"maxName": 98.71,
+			"courses_year": 2011
+		},
+		{
+			"maxName": 99.19,
+			"courses_year": 2012
+		},
+		{
+			"maxName": 98.5,
+			"courses_year": 2013
+		},
+		{
+			"maxName": 98.8,
+			"courses_year": 2014
+		},
+		{
+			"maxName": 98.98,
+			"courses_year": 2015
+		},
+		{
+			"maxName": 97.25,
+			"courses_year": 2016
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"title": "invalid column rooms query",
+	"input": {
+		"WHERE": {},
+		"OPTIONS":{
+			"COLUMNS": [
+				"rooms_dept", "rooms_name", "rooms_type"
+			],
+			"ORDER": "rooms_name"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,243 @@
+{
+	"title": "rooms MAX basic query",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"maxAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title"
+			],
+			"APPLY": [
+				{
+					"maxAvg": {
+						"MAX": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_title": "comptn, progrmng",
+			"maxAvg": 85.46
+		},
+		{
+			"courses_title": "model comptn",
+			"maxAvg": 84.56
+		},
+		{
+			"courses_title": "sftwr constructn",
+			"maxAvg": 86.15
+		},
+		{
+			"courses_title": "intro comp sys",
+			"maxAvg": 81.76
+		},
+		{
+			"courses_title": "basic alg&data",
+			"maxAvg": 86.47
+		},
+		{
+			"courses_title": "dta&alg elec eng",
+			"maxAvg": 75.82
+		},
+		{
+			"courses_title": "basics comp syst",
+			"maxAvg": 71.45
+		},
+		{
+			"courses_title": "comptng life sci",
+			"maxAvg": 88
+		},
+		{
+			"courses_title": "num comp alg prb",
+			"maxAvg": 79.46
+		},
+		{
+			"courses_title": "num approx/discr",
+			"maxAvg": 77.62
+		},
+		{
+			"courses_title": "intr rel databse",
+			"maxAvg": 85.5
+		},
+		{
+			"courses_title": "intr sftwr eng",
+			"maxAvg": 84.6
+		},
+		{
+			"courses_title": "programmng langs",
+			"maxAvg": 84.39
+		},
+		{
+			"courses_title": "func & logic prg",
+			"maxAvg": 85.13
+		},
+		{
+			"courses_title": "comp hard&os",
+			"maxAvg": 82.27
+		},
+		{
+			"courses_title": "comp graphics",
+			"maxAvg": 82.58
+		},
+		{
+			"courses_title": "internet comp",
+			"maxAvg": 76.87
+		},
+		{
+			"courses_title": "softwr eng proj",
+			"maxAvg": 88.39
+		},
+		{
+			"courses_title": "intr alg dsgn&an",
+			"maxAvg": 73.38
+		},
+		{
+			"courses_title": "artificial intel",
+			"maxAvg": 78.34
+		},
+		{
+			"courses_title": "machine lrn mine",
+			"maxAvg": 82.66
+		},
+		{
+			"courses_title": "hum-com interact",
+			"maxAvg": 81.18
+		},
+		{
+			"courses_title": "adv rel databse",
+			"maxAvg": 81.82
+		},
+		{
+			"courses_title": "adv software eng",
+			"maxAvg": 80.18
+		},
+		{
+			"courses_title": "compiler constrc",
+			"maxAvg": 86
+		},
+		{
+			"courses_title": "adv opertng sysm",
+			"maxAvg": 73.37
+		},
+		{
+			"courses_title": "distrbt'd systms",
+			"maxAvg": 81.18
+		},
+		{
+			"courses_title": "parallel comput",
+			"maxAvg": 86.04
+		},
+		{
+			"courses_title": "adv alg dsgn&anl",
+			"maxAvg": 78.32
+		},
+		{
+			"courses_title": "theory comptg",
+			"maxAvg": 79.88
+		},
+		{
+			"courses_title": "intel systems",
+			"maxAvg": 78.3
+		},
+		{
+			"courses_title": "computer vision",
+			"maxAvg": 77.68
+		},
+		{
+			"courses_title": "comptr & society",
+			"maxAvg": 80.55
+		},
+		{
+			"courses_title": "hmn-cp interactn",
+			"maxAvg": 80.62
+		},
+		{
+			"courses_title": "alg in bioin",
+			"maxAvg": 91.25
+		},
+		{
+			"courses_title": "honours thesis",
+			"maxAvg": 93.5
+		},
+		{
+			"courses_title": "student seminar",
+			"maxAvg": 92.4
+		},
+		{
+			"courses_title": "fund alg dsgn&an",
+			"maxAvg": 86.33
+		},
+		{
+			"courses_title": "thry of automata",
+			"maxAvg": 94
+		},
+		{
+			"courses_title": "artif intell 1",
+			"maxAvg": 86.2
+		},
+		{
+			"courses_title": "computl ling 1",
+			"maxAvg": 94.5
+		},
+		{
+			"courses_title": "software eng",
+			"maxAvg": 91.79
+		},
+		{
+			"courses_title": "prog lang princ",
+			"maxAvg": 88
+		},
+		{
+			"courses_title": "intgrt sys desgn",
+			"maxAvg": 89.09
+		},
+		{
+			"courses_title": "comput robotics",
+			"maxAvg": 83.36
+		},
+		{
+			"courses_title": "para algs & arch",
+			"maxAvg": 87.78
+		},
+		{
+			"courses_title": "artif intell 2",
+			"maxAvg": 90.71
+		},
+		{
+			"courses_title": "comp comm protcl",
+			"maxAvg": 91.22
+		},
+		{
+			"courses_title": "machine learn i",
+			"maxAvg": 91.22
+		},
+		{
+			"courses_title": "phy user intfc",
+			"maxAvg": 89.75
+		},
+		{
+			"courses_title": "hmn-cmpt intract",
+			"maxAvg": 88
+		},
+		{
+			"courses_title": "info visualizatn",
+			"maxAvg": 88.68
+		},
+		{
+			"courses_title": "m.sc major essay",
+			"maxAvg": 95
+		}
+	]
+}

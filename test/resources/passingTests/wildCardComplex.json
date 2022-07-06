@@ -1,0 +1,85 @@
+{
+  "title": "wildCardComplex",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 96
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "*a*"
+              }
+            }
+          ]
+        },
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_title": "*t *"
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "**"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg",
+        "courses_title"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "courses_dept": "math",
+      "courses_id": "516",
+      "courses_avg": 96.25,
+      "courses_title": "prt diff equa i"
+    },
+    {
+      "courses_dept": "math",
+      "courses_id": "516",
+      "courses_avg": 96.25,
+      "courses_title": "prt diff equa i"
+    },
+    {
+      "courses_dept": "plan",
+      "courses_id": "595",
+      "courses_avg": 96.47,
+      "courses_title": "nat resrce mngmt"
+    },
+    {
+      "courses_dept": "plan",
+      "courses_id": "595",
+      "courses_avg": 96.47,
+      "courses_title": "nat resrce mngmt"
+    },
+    {
+      "courses_dept": "arst",
+      "courses_id": "550",
+      "courses_avg": 96.94,
+      "courses_title": "aud&non-txt arch"
+    },
+    {
+      "courses_dept": "arst",
+      "courses_id": "550",
+      "courses_avg": 96.94,
+      "courses_title": "aud&non-txt arch"
+    }
+  ]
+}

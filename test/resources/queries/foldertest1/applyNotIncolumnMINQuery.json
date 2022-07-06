@@ -1,0 +1,41 @@
+{
+	"title": "rooms MIN basic invalid query",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 99
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"minAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"APPLY": [
+				{
+					"minAvg": {
+						"MIN": "courses_avg"
+					}
+				},
+				{
+					"maxAvg": {
+						"MAX": "courses_avg"
+					}
+				}
+			],
+			"GROUP": [
+				"courses_title"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"minAvg": 99.19
+		},
+		{
+			"minAvg": 99.78
+		}
+	]
+}

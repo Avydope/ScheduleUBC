@@ -1,0 +1,243 @@
+{
+	"title": "rooms SUM basic query",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"sumAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title"
+			],
+			"APPLY": [
+				{
+					"sumAvg": {
+						"SUM": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_title": "comptn, progrmng",
+			"sumAvg": 4315.79
+		},
+		{
+			"courses_title": "model comptn",
+			"sumAvg": 4608.02
+		},
+		{
+			"courses_title": "sftwr constructn",
+			"sumAvg": 3403.46
+		},
+		{
+			"courses_title": "intro comp sys",
+			"sumAvg": 3183.71
+		},
+		{
+			"courses_title": "basic alg&data",
+			"sumAvg": 3873.43
+		},
+		{
+			"courses_title": "dta&alg elec eng",
+			"sumAvg": 744.64
+		},
+		{
+			"courses_title": "basics comp syst",
+			"sumAvg": 553.36
+		},
+		{
+			"courses_title": "comptng life sci",
+			"sumAvg": 1145.72
+		},
+		{
+			"courses_title": "num comp alg prb",
+			"sumAvg": 1359.2
+		},
+		{
+			"courses_title": "num approx/discr",
+			"sumAvg": 1309.7
+		},
+		{
+			"courses_title": "intr rel databse",
+			"sumAvg": 3128.23
+		},
+		{
+			"courses_title": "intr sftwr eng",
+			"sumAvg": 3051.73
+		},
+		{
+			"courses_title": "programmng langs",
+			"sumAvg": 1390.44
+		},
+		{
+			"courses_title": "func & logic prg",
+			"sumAvg": 1614.16
+		},
+		{
+			"courses_title": "comp hard&os",
+			"sumAvg": 2589.4
+		},
+		{
+			"courses_title": "comp graphics",
+			"sumAvg": 2073.03
+		},
+		{
+			"courses_title": "internet comp",
+			"sumAvg": 1959.28
+		},
+		{
+			"courses_title": "softwr eng proj",
+			"sumAvg": 1521.28
+		},
+		{
+			"courses_title": "intr alg dsgn&an",
+			"sumAvg": 2313.12
+		},
+		{
+			"courses_title": "artificial intel",
+			"sumAvg": 2266.48
+		},
+		{
+			"courses_title": "machine lrn mine",
+			"sumAvg": 1513.82
+		},
+		{
+			"courses_title": "hum-com interact",
+			"sumAvg": 1491
+		},
+		{
+			"courses_title": "adv rel databse",
+			"sumAvg": 2006.77
+		},
+		{
+			"courses_title": "adv software eng",
+			"sumAvg": 1388
+		},
+		{
+			"courses_title": "compiler constrc",
+			"sumAvg": 1443.3
+		},
+		{
+			"courses_title": "adv opertng sysm",
+			"sumAvg": 1418.58
+		},
+		{
+			"courses_title": "distrbt'd systms",
+			"sumAvg": 1348.18
+		},
+		{
+			"courses_title": "parallel comput",
+			"sumAvg": 483.04
+		},
+		{
+			"courses_title": "adv alg dsgn&anl",
+			"sumAvg": 1300.28
+		},
+		{
+			"courses_title": "theory comptg",
+			"sumAvg": 1348.36
+		},
+		{
+			"courses_title": "intel systems",
+			"sumAvg": 1314.16
+		},
+		{
+			"courses_title": "computer vision",
+			"sumAvg": 1330.7
+		},
+		{
+			"courses_title": "comptr & society",
+			"sumAvg": 1702.58
+		},
+		{
+			"courses_title": "hmn-cp interactn",
+			"sumAvg": 788.38
+		},
+		{
+			"courses_title": "alg in bioin",
+			"sumAvg": 1455.46
+		},
+		{
+			"courses_title": "honours thesis",
+			"sumAvg": 1446.06
+		},
+		{
+			"courses_title": "student seminar",
+			"sumAvg": 1346.55
+		},
+		{
+			"courses_title": "fund alg dsgn&an",
+			"sumAvg": 1511.2
+		},
+		{
+			"courses_title": "thry of automata",
+			"sumAvg": 1077.3
+		},
+		{
+			"courses_title": "artif intell 1",
+			"sumAvg": 1161.48
+		},
+		{
+			"courses_title": "computl ling 1",
+			"sumAvg": 1057
+		},
+		{
+			"courses_title": "software eng",
+			"sumAvg": 874.42
+		},
+		{
+			"courses_title": "prog lang princ",
+			"sumAvg": 860.2
+		},
+		{
+			"courses_title": "intgrt sys desgn",
+			"sumAvg": 1323.14
+		},
+		{
+			"courses_title": "comput robotics",
+			"sumAvg": 490.78
+		},
+		{
+			"courses_title": "para algs & arch",
+			"sumAvg": 1190.82
+		},
+		{
+			"courses_title": "artif intell 2",
+			"sumAvg": 681.3
+		},
+		{
+			"courses_title": "comp comm protcl",
+			"sumAvg": 699.88
+		},
+		{
+			"courses_title": "machine learn i",
+			"sumAvg": 1373.92
+		},
+		{
+			"courses_title": "phy user intfc",
+			"sumAvg": 1029.4
+		},
+		{
+			"courses_title": "hmn-cmpt intract",
+			"sumAvg": 1517.6
+		},
+		{
+			"courses_title": "info visualizatn",
+			"sumAvg": 354.3
+		},
+		{
+			"courses_title": "m.sc major essay",
+			"sumAvg": 1457.77
+		}
+	]
+}

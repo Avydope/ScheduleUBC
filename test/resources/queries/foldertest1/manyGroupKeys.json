@@ -1,0 +1,133 @@
+{
+	"title": "group many keys",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 98
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"maxName",
+				"courses_title"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title",
+				"courses_avg",
+				"courses_uuid"
+			],
+			"APPLY": [
+				{
+					"maxName": {
+						"MAX": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"maxName": 99.19,
+			"courses_title": "career planning"
+		},
+		{
+			"maxName": 98.75,
+			"courses_title": "multimedia sys"
+		},
+		{
+			"maxName": 98.75,
+			"courses_title": "multimedia sys"
+		},
+		{
+			"maxName": 98.08,
+			"courses_title": "assess lrn diffi"
+		},
+		{
+			"maxName": 98.7,
+			"courses_title": "assess lrn diffi"
+		},
+		{
+			"maxName": 98.36,
+			"courses_title": "assess lrn diffi"
+		},
+		{
+			"maxName": 98.8,
+			"courses_title": "educ stds autism"
+		},
+		{
+			"maxName": 98.58,
+			"courses_title": "educ stds autism"
+		},
+		{
+			"maxName": 98.58,
+			"courses_title": "educ stds autism"
+		},
+		{
+			"maxName": 98.76,
+			"courses_title": "educ stds autism"
+		},
+		{
+			"maxName": 98.76,
+			"courses_title": "educ stds autism"
+		},
+		{
+			"maxName": 98.45,
+			"courses_title": "dev el sk df&hrd"
+		},
+		{
+			"maxName": 98.45,
+			"courses_title": "dev el sk df&hrd"
+		},
+		{
+			"maxName": 99.78,
+			"courses_title": "algb topology i"
+		},
+		{
+			"maxName": 99.78,
+			"courses_title": "algb topology i"
+		},
+		{
+			"maxName": 98.71,
+			"courses_title": "cl pro prim care"
+		},
+		{
+			"maxName": 98.71,
+			"courses_title": "cl pro prim care"
+		},
+		{
+			"maxName": 98.21,
+			"courses_title": "cl pro prim care"
+		},
+		{
+			"maxName": 98.21,
+			"courses_title": "cl pro prim care"
+		},
+		{
+			"maxName": 98.5,
+			"courses_title": "fam nrs pract"
+		},
+		{
+			"maxName": 98.5,
+			"courses_title": "fam nrs pract"
+		},
+		{
+			"maxName": 98.58,
+			"courses_title": "fam nrs pract"
+		},
+		{
+			"maxName": 98.58,
+			"courses_title": "fam nrs pract"
+		},
+		{
+			"maxName": 98.98,
+			"courses_title": "work int health"
+		},
+		{
+			"maxName": 98.98,
+			"courses_title": "work int health"
+		}
+	]
+}

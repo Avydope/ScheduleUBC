@@ -1,0 +1,38 @@
+{
+  "title": "wildCardInvalid_v3",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 98
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "a*e"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "courses_avg": 10
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

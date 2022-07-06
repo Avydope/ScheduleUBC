@@ -1,0 +1,71 @@
+{
+  "title": "wildCardComplex_V2",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_instructor": "*g"
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "*a*"
+              }
+            }
+          ]
+        },
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_title": "*int *"
+              }
+            },
+            {
+              "IS": {
+                "courses_uuid": "*76*"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_uuid",
+        "courses_avg",
+        "courses_title",
+        "courses_instructor"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "courses_dept": "math",
+      "courses_uuid": "3769",
+      "courses_avg": 65.44,
+      "courses_title": "int calc ap lf s",
+      "courses_instructor": "li, dong"
+    },
+    {
+      "courses_dept": "visa",
+      "courses_uuid": "5769",
+      "courses_avg": 78.4,
+      "courses_title": "intrmd paint ii",
+      "courses_instructor": "gu, xiong"
+    },
+    {
+      "courses_dept": "visa",
+      "courses_uuid": "5766",
+      "courses_avg": 78.94,
+      "courses_title": "intrmd paint i",
+      "courses_instructor": "gu, xiong"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "greater than 102",
+  "input": {
+    "WHERE": {
+      "GT": {
+        "courses1_avg": 99
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses1_avg"
+      ],
+      "ORDER": "courses1_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [{"courses1_avg":99.19},{"courses1_avg":99.78},{"courses1_avg":99.78}]
+}
+
